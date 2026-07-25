@@ -2,6 +2,8 @@ import DashboardHeader from "./DashboardHeader";
 import FinancialOverview from "./FinancialOverview";
 import AnalyticsChart from "./AnalyticsChart";
 import RecentTransactions from "./RecentTransactions";
+import BudgetProgress from "./BudgetProgress";
+import SavingsGoals from "./SavingsGoals";
 
 export default function Dashboard() {
   return (
@@ -16,6 +18,11 @@ export default function Dashboard() {
         </div>
 
         <RecentTransactions />
+      </div>
+
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <BudgetProgress />
+        <SavingsGoals />
       </div>
     </div>
   );
