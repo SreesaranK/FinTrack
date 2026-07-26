@@ -1,3 +1,3 @@
-##FinTrack
-#Live Demo
+# FinTrack
+## Live Demo
  https://sreesarank.github.io/FinTrack/
