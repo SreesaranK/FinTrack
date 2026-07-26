@@ -9,6 +9,8 @@ export default function FinancialOverview() {
           key={item.title}
           title={item.title}
           amount={item.amount}
+          trend={item.trend}
+          trendLabel={item.trendLabel}
           icon={item.icon}
           color={item.color}
         />

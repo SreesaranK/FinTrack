@@ -9,6 +9,12 @@ export default function Card({
         rounded-3xl
         shadow-lg
         p-6
+        border
+        border-slate-100
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-2xl
         ${className}
       `}
     >
