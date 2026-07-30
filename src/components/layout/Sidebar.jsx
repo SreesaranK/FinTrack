@@ -7,6 +7,7 @@ import {
   FiBell,
   FiUser,
   FiSettings,
+  FiX,
 } from "react-icons/fi";
 
 const menu = [
@@ -19,30 +20,36 @@ const menu = [
   { name: "Settings", icon: FiSettings },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ closeSidebar }) {
   return (
-    <aside className="w-72 bg-white border-r border-slate-200 h-screen p-6">
+    <div className="h-full p-6 overflow-y-auto">
+      <div className="flex items-center justify-between">
+        <Logo />
 
-      <Logo />
+        <button
+          onClick={closeSidebar}
+          className="lg:hidden p-2 rounded-lg hover:bg-slate-100"
+        >
+          <FiX size={22} />
+        </button>
+      </div>
 
       <nav className="mt-10 space-y-2">
-
         {menu.map((item) => {
           const Icon = item.icon;
 
           return (
             <button
               key={item.name}
-              className="flex items-center gap-4 w-full px-4 py-3 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition"
+              onClick={closeSidebar}
+              className="flex w-full items-center gap-4 rounded-xl px-4 py-3 text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600"
             >
               <Icon size={20} />
-              <span>{item.name}</span>
+              <span className="font-medium">{item.name}</span>
             </button>
           );
         })}
-
       </nav>
-
-    </aside>
+    </div>
   );
 }

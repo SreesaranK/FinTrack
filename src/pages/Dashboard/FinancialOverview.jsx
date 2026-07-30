@@ -3,7 +3,7 @@ import { stats } from "../../data/dashboardData";
 
 export default function FinancialOverview() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-4 md:gap-6">
       {stats.map((item) => (
         <StatCard
           key={item.title}
@@ -15,6 +15,6 @@ export default function FinancialOverview() {
           color={item.color}
         />
       ))}
-    </div>
+    </section>
   );
 }
